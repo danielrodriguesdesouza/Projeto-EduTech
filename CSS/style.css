@@ -19,9 +19,12 @@ p {
 }
 
 header {
+    display: flex; /*Ativa o Flexbox*/
+    justify-content: space-between; /*Logo de um canto e menu de  outro */
+    align-items: center; /*Alinha os itens no meio vertical */
     background-color: #1a4db3;
     color: #ffffff;
-    padding: 20px 0;
+    padding: 10px 20px;
 }
 
 footer{
@@ -62,6 +65,16 @@ nav a{
 
 nav a:hover {
     color:#ff6a00
+}
+
+.ativo {
+    color:#ff6a00;
+    text-decoration: underline; /*sublinha para reforça o destaque */
+}
+
+.menu {
+    display: flex; /*Links ficam em linha*/
+    gap:15; /* Espaço entre links*/
 }
 
 /* SEÇÃO PRINCIPAL DA PÁGINA INICIO */
@@ -116,6 +129,10 @@ nav a:hover {
 }
 
 .curso {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    transition: 0.2s; /* hover suave */
     padding: 15px;
     margin:15px;
     border:1px solid #dddddd;
@@ -123,9 +140,18 @@ nav a:hover {
     text-align: center;
 }
 
+.curso:hover {
+    transform: translateY(-3px); /* Sobe um pouco */
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12); /* Projeção de sombra*/
+}
+
 .curso img {
-    max-width: 100%;
-    height: auto;
+    width:100%; /* Ocupa toda a largura do card*/
+    height: 400px; /* Altura padrão para todas imagem*/
+    object-fit: contain; /* Mostra imagem inteira*/
+    background-color: white;
+    border-radius: 6px;
+    margin-top: 10px;
 }
 
 /* PÁGINA CONTATO */
